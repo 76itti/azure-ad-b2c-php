@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C\Test\Entity;
+namespace devitti\AzureADB2C\Test\Entity;
 
-use 76itti\AzureADB2C\Entity\BaseEntity;
+use devitti\AzureADB2C\Entity\BaseEntity;
 use PHPUnit\Framework\TestCase;
 
 class BaseEntityTest extends TestCase

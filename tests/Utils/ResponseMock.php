@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C\Test\Utils;
+namespace devitti\AzureADB2C\Test\Utils;
 
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ResponseInterface;

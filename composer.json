@@ -1,5 +1,5 @@
 {
-    "name": "76itti/azure-ad-b2c-php",
+    "name": "devitti/azure-ad-b2c-php",
     "description": "Azure AD B2C for PHP",
     "type": "library",
     "license": "MIT",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "76itti\\AzureADB2C\\": "src/"
+            "devitti\\AzureADB2C\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "76itti\\AzureADB2C\\Test\\": "tests/"
+            "devitti\\AzureADB2C\\Test\\": "tests/"
         }
     }
 }

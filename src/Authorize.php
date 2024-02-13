@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C;
+namespace devitti\AzureADB2C;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Query;
-use 76itti\AzureADB2C\Entity\AccessToken;
-use 76itti\AzureADB2C\Entity\Configuration;
-use 76itti\AzureADB2C\Exception\InternalErrorException;
-use 76itti\AzureADB2C\Exception\ResponseErrorException;
-use 76itti\AzureADB2C\Exception\VerificationError;
+use devitti\AzureADB2C\Entity\AccessToken;
+use devitti\AzureADB2C\Entity\Configuration;
+use devitti\AzureADB2C\Exception\InternalErrorException;
+use devitti\AzureADB2C\Exception\ResponseErrorException;
+use devitti\AzureADB2C\Exception\VerificationError;
 
 /**
  * Authorize class
@@ -19,8 +19,8 @@ use 76itti\AzureADB2C\Exception\VerificationError;
  * @property string $client_id
  * @property string $client_secret
  * @property string|null $flow
- * @property \76itti\AzureADB2C\Entity\Configuration $configuration
- * @property \76itti\AzureADB2C\JWT $jwt
+ * @property \devitti\AzureADB2C\Entity\Configuration $configuration
+ * @property \devitti\AzureADB2C\JWT $jwt
  * @property array $jwks
  */
 class Authorize {

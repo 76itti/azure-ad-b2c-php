@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C;
+namespace devitti\AzureADB2C;
 
 use Firebase\JWT\JWT as FirebaseJWT;
 use Firebase\JWT\JWK as FirebaseJWK;

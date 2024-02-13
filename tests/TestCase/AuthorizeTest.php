@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C\Test;
+namespace devitti\AzureADB2C\Test;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\BufferStream;
 use GuzzleHttp\Psr7\Query;
-use 76itti\AzureADB2C\Authorize;
-use 76itti\AzureADB2C\Entity\Configuration;
-use 76itti\AzureADB2C\JWT;
+use devitti\AzureADB2C\Authorize;
+use devitti\AzureADB2C\Entity\Configuration;
+use devitti\AzureADB2C\JWT;
 use PHPUnit\Framework\TestCase;
-use 76itti\AzureADB2C\Test\Utils\ResponseMock;
+use devitti\AzureADB2C\Test\Utils\ResponseMock;
 
 class AuthorizeTest extends TestCase
 {

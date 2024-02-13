@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace 76itti\AzureADB2C\Entity;
+namespace devitti\AzureADB2C\Entity;
 
 use JOSE_JWS;
 
