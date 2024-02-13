@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "kaz29\\AzureADB2C\\": "src/"
+            "76itti\\AzureADB2C\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "kaz29\\AzureADB2C\\Test\\": "tests/"
+            "76itti\\AzureADB2C\\Test\\": "tests/"
         }
     }
 }
