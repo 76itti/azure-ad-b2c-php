@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace kaz29\AzureADB2C\Exception;
+namespace 76itti\AzureADB2C\Exception;
 
 abstract class BaseException extends \Exception
 {

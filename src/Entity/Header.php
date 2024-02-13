@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace kaz29\AzureADB2C\Entity;
+namespace 76itti\AzureADB2C\Entity;
 
 /**
  * Header

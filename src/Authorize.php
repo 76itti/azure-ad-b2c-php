@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace kaz29\AzureADB2C;
+namespace 76itti\AzureADB2C;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Query;
-use kaz29\AzureADB2C\Entity\AccessToken;
-use kaz29\AzureADB2C\Entity\Configuration;
-use kaz29\AzureADB2C\Exception\InternalErrorException;
-use kaz29\AzureADB2C\Exception\ResponseErrorException;
-use kaz29\AzureADB2C\Exception\VerificationError;
+use 76itti\AzureADB2C\Entity\AccessToken;
+use 76itti\AzureADB2C\Entity\Configuration;
+use 76itti\AzureADB2C\Exception\InternalErrorException;
+use 76itti\AzureADB2C\Exception\ResponseErrorException;
+use 76itti\AzureADB2C\Exception\VerificationError;
 
 /**
  * Authorize class
@@ -19,8 +19,8 @@ use kaz29\AzureADB2C\Exception\VerificationError;
  * @property string $client_id
  * @property string $client_secret
  * @property string|null $flow
- * @property \kaz29\AzureADB2C\Entity\Configuration $configuration
- * @property \kaz29\AzureADB2C\JWT $jwt
+ * @property \76itti\AzureADB2C\Entity\Configuration $configuration
+ * @property \76itti\AzureADB2C\JWT $jwt
  * @property array $jwks
  */
 class Authorize {
