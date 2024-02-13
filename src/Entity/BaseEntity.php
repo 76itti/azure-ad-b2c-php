@@ -23,7 +23,7 @@ abstract class BaseEntity implements \ArrayAccess, \JsonSerializable
         }
     }
 
-    public function offsetExists($offset): bool
+    public function offsetExists($offset)
     {
         return array_key_exists($offset, $this->data);
     }
@@ -37,7 +37,7 @@ abstract class BaseEntity implements \ArrayAccess, \JsonSerializable
         return $this->data[$offset];
     }
 
-    public function offsetSet($offset , $value): void
+    public function offsetSet($offset , $value)
     {
         if (is_null($offset)) {
             throw new \Exception('Invalid offset');
@@ -46,10 +46,12 @@ abstract class BaseEntity implements \ArrayAccess, \JsonSerializable
         $this->data[$offset] = $value;
     }
 
-    public function offsetUnset($offset): void
+    public function offsetUnset($offset)
     {
         unset($this->data[$offset]);
     }
+
+
 
     public function __get($name)
     {
