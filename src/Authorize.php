@@ -196,10 +196,14 @@ class Authorize {
             throw new ResponseErrorException('Could not get accessToken', $response->getStatusCode());
         }
 
-        $accessToken = new AccessToken(json_decode((string)$response->getBody()->getContents(), true));
+        $bodycontent = json_decode((string)$response->getBody()->getContents(), true);
+        $accessToken = new AccessToken($bodycontent);
 
-        $claims = $this->verifyToken($accessToken->accessToken, $flow);
-
+        if ($accessToken->accessToken !== null){
+            $claims = $this->verifyToken($accessToken->accessToken, $flow);
+        } else {
+            $claims = $this->verifyToken($accessToken->idToken, $flow);
+        }
         $accessToken->setClaims($claims, $this->claims_config);
 
         return $accessToken;
@@ -232,7 +236,11 @@ class Authorize {
 
         $accessToken = new AccessToken(json_decode((string)$response->getBody()->getContents(), true));
 
-        $claims = $this->verifyToken($accessToken->accessToken, $flow);
+        if ($accessToken->accessToken !== null){
+            $claims = $this->verifyToken($accessToken->accessToken, $flow);
+        } else {
+            $claims = $this->verifyToken($accessToken->idToken, $flow);
+        }
         $accessToken->setClaims($claims);
 
         return $accessToken;
@@ -240,8 +248,9 @@ class Authorize {
 
     public function verifyToken(string $token, string $flow): array
     {
+        $jwks = $this->getJWKs($flow);
         try {
-            return $this->jwt->decodeJWK($token, $this->getJWKs($flow));
+            return $this->jwt->decodeJWK($token, $jwks);
         } catch (\Exception $e) {
             throw new VerificationError($e->getMessage());
         }

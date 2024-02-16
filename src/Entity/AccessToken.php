@@ -23,9 +23,11 @@ class AccessToken extends BaseEntity {
     protected $config = [
         'map' => [
             'access_token' => 'accessToken',
+            'id_token' => 'idToken',
             'token_type' => 'tokenType',
             'not_before' => 'notBefore',
             'expires_in' => 'expiresIn',
+            'id_token_expires_in' => 'idTokenExpiresIn',
             'expires_on' => 'expiresOn',
             'resource' => 'resource',
             'profile_info' => 'profileInfo',
