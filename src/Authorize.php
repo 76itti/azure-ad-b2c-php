@@ -111,13 +111,21 @@ class Authorize {
         return $authorizationEndpoint . '&' . Query::build($query);
     }
 
-    public function getEndSessionEndpoint(string $flow): string
+    public function getEndSessionEndpoint(
+        string $flow,
+        string $redirectUri
+    ): string
     {
         if (array_key_exists($flow, $this->configurations) !== true) {
             throw new InternalErrorException('Configuration not complete');
         }
 
-        return $this->applyCustomDomain($this->configurations[$flow]->endSessionEndpoint);
+        $endSessionEndpoint =  $this->applyCustomDomain($this->configurations[$flow]->endSessionEndpoint);
+        $query = [
+            'redirect_uri' => $redirectUri
+        ];
+
+        return $endSessionEndpoint . '&' . Query::build($query);
     }
 
     public function setJWKs(string $flow, array $jwks): void
