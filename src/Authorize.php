@@ -85,9 +85,10 @@ class Authorize {
         string $redirectUri,
         string $scope, 
         $nonce, 
-        string $responseMode = 'form_post', 
+        string $responseMode = null, 
         string $responseType = 'code id_token',
-        string $state = null
+        string $state = null,
+        string $prompt = null
     ): string
     {
         if (array_key_exists($flow, $this->configurations) !== true) {
@@ -100,9 +101,15 @@ class Authorize {
             'redirect_uri' => $redirectUri,
             'scope' => $scope,
             'response_type' => $responseType,
-            'response_mode' => $responseMode,
             'nonce' => $nonce,
         ];
+        
+        if (!empty($responseMode)) {
+            $query['response_mode'] = $responseMode;
+        }
+
+        if (!empty($prompt)) {
+            $query['prompt'] = $prompt;
 
         if (!is_null($state)) {
             $query['state'] = $state;
