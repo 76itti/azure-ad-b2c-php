@@ -110,7 +110,8 @@ class Authorize {
 
         if (!empty($prompt)) {
             $query['prompt'] = $prompt;
-
+        }
+        
         if (!is_null($state)) {
             $query['state'] = $state;
         }
